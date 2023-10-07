@@ -1,0 +1,27 @@
+from: <ses@verifieddomain.com>
+to: <me@mymail.com>
+subject: [SES Forward] Hello | From: "Andrew" <andrew@example.com>;
+content-type: multipart/mixed; boundary="BOUNDARY_PART"
+
+--BOUNDARY_PART
+content-type: text/plain; charset="utf-8"
+content-transfer-encoding: base64
+
+VGhlIGZvcndhcmRlZCBtZXNzYWdlIGlzIGluIHRoZSBhdHRhY2htZW50ICJIZWxsby5lbWwi
+
+--BOUNDARY_PART
+content-type: text/plain; charset="utf-8"
+content-disposition: attachment; filename="Hello.eml"
+content-transfer-encoding: base64
+
+UmVjZWl2ZWQ6IGZyb20gYWJjLnNtdHAtb3V0LmFtYXpvbnNlcy5jb20gKDEyMy40NS42Ny44OSkg
+YnkgaW4uZXhhbXBsZS5jb20gKDg3LjY1LjQzLjIxMCk7IEZyaSwgMTcgRGVjIDIwMTAgMTQ6MjY6
+MjIKRnJvbTogIkFuZHJldyIgPGFuZHJld0BleGFtcGxlLmNvbT47ClRvOiAiQm9iIiA8Ym9iQGV4
+YW1wbGUuY29tPgpEYXRlOiBGcmksIDE3IERlYyAyMDEwIDE0OjI2OjIxIC0wODAwClN1YmplY3Q6
+IEhlbGxvCk1lc3NhZ2UtSUQ6IDw2MTk2NzIzMC03QTQ1LTRBOUQtQkVDOS04N0NCQ0YyMjExQzlA
+ZXhhbXBsZS5jb20+CkFjY2VwdC1MYW5ndWFnZTogZW4tVVMKQ29udGVudC1MYW5ndWFnZTogZW4t
+VVMKQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluOyBjaGFyc2V0PSJ1cy1hc2NpaSIKQ29udGVudC1U
+cmFuc2Zlci1FbmNvZGluZzogcXVvdGVkLXByaW50YWJsZQpNSU1FLVZlcnNpb246IDEuMAoKSGVs
+bG8sIEkgaG9wZSB5b3UgYXJlIGhhdmluZyBhIGdvb2QgZGF5LgoKLUFuZHJldw==
+
+--BOUNDARY_PART--

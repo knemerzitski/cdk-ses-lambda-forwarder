@@ -1,0 +1,33 @@
+{
+  "extends": ["eslint:recommended", "prettier"],
+  "plugins": ["import", "testing-library"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "pathGroups": [
+          {
+            "pattern": "~/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["*.[t]s?(x)"],
+      "extends": "plugin:@typescript-eslint/recommended"
+    },
+    {
+      "files": ["test/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+      "plugins": ["mocha"]
+    }
+  ]
+}

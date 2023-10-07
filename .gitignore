@@ -1,0 +1,10 @@
+node_modules
+
+.env*.local
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Lint
+.eslintcache
