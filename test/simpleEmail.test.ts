@@ -82,7 +82,7 @@ content-transfer-encoding: base64
 VGhlIGZvcndhcmRlZCBtZXNzYWdlIGlzIGluIHRoZSBhdHRhY2htZW50ICJIaSB0aGVyZS5lbWwi
 
 --BOUNDARY_PART
-content-type: text/plain; charset="utf-8"
+content-type: application/octet-stream; name="Hi there.eml"
 content-disposition: attachment; filename="Hi there.eml"
 content-transfer-encoding: base64
 

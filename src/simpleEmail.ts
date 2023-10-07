@@ -84,11 +84,11 @@ export function buildRawEmailString(
   // Turn email body into raw string
   const rawBody = email.body
     .map(({ headers, content }) => {
-      const tmpHeaders = headers
-        ? encodeHeaderValues(trimLowerCaseKeys(headers))
-        : {};
-      tmpHeaders['content-type'] = 'text/plain; charset="utf-8"';
-      tmpHeaders['content-transfer-encoding'] = 'base64';
+      const tmpHeaders = {
+        'content-type': 'text/plain; charset="utf-8"',
+        ...(headers ? encodeHeaderValues(trimLowerCaseKeys(headers)) : {}),
+        'content-transfer-encoding': 'base64',
+      };
 
       return [
         ...beforeMimeHeaderPart,
