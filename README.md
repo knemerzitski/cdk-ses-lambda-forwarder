@@ -18,7 +18,7 @@ Example `.env.local`
 
 ```
 # Domains or addresses to catch emails from for forwarding. Comma separated list.
-SES_RULE_RECEPIPENTS=mydomain.com,mydomain2.com,specific@mydomain.com
+SES_RULE_RECIPIENTS=mydomain.com,mydomain2.com,specific@mydomain.com
 
 SES_REGION=eu-central-1
 

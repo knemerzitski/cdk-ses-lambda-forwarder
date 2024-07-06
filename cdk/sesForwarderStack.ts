@@ -77,7 +77,7 @@ export class SesForwarderStack extends Stack {
       })
     );
 
-    const recipients = process.env.SES_RULE_RECEPIENTS?.split(',') ?? undefined;
+    const recipients = process.env.SES_RULE_RECIPIENTS?.split(',') ?? undefined;
 
     new ReceiptRuleSet(this, 'SaveS3InvokeForwardLambdaRuleSet', {
       rules: [
