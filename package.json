@@ -26,8 +26,8 @@
     "@types/mocha": "^10.0.2",
     "@types/node": "20.6.3",
     "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "aws-cdk": "2.97.0",
-    "aws-cdk-lib": "2.97.0",
+    "aws-cdk": "^2.97.0",
+    "aws-cdk-lib": "^2.196.1",
     "constructs": "^10.0.0",
     "debug": "^4.3.4",
     "dotenv": "^16.3.1",
@@ -48,5 +48,6 @@
   },
   "validate-branch-name": {
     "pattern": "^(dev|test|main|release)$|^(feat|fix|hotfix|wip|merge)/.+$"
-  }
+  },
+  "packageManager": "npm@10.9.1+sha512.c89530d37c4baa38afd43e76a077a84b9aa63840b986426584fd5c5a54ab0a0b21bb1595c851042b733784b0b43706d36a494b4d8ae1a086a762cb8d3f95942a"
 }

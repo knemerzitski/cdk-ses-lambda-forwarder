@@ -45,7 +45,7 @@ export class SesForwarderStack extends Stack {
       'SesEmailForwarderLambda',
       {
         entry: path.join(__dirname, './../src/handler.ts'),
-        runtime: Runtime.NODEJS_18_X,
+        runtime: Runtime.NODEJS_22_X,
         handler: 'handler',
         logRetention: RetentionDays.ONE_DAY,
         timeout: Duration.seconds(8),
