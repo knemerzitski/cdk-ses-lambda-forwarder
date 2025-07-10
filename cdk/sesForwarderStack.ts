@@ -4,7 +4,7 @@ import { Duration, RemovalPolicy, Stack, StackProps } from 'aws-cdk-lib';
 import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam';
 import { Runtime } from 'aws-cdk-lib/aws-lambda';
 import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
-import { RetentionDays } from 'aws-cdk-lib/aws-logs';
+import { LogGroup, RetentionDays } from 'aws-cdk-lib/aws-logs';
 import { Bucket } from 'aws-cdk-lib/aws-s3';
 import { ReceiptRuleSet, TlsPolicy } from 'aws-cdk-lib/aws-ses';
 import { S3, Lambda, LambdaInvocationType } from 'aws-cdk-lib/aws-ses-actions';
@@ -47,7 +47,9 @@ export class SesForwarderStack extends Stack {
         entry: path.join(__dirname, './../src/handler.ts'),
         runtime: Runtime.NODEJS_22_X,
         handler: 'handler',
-        logRetention: RetentionDays.ONE_DAY,
+        logGroup: new LogGroup(this, 'LogGroup', {
+          retention: RetentionDays.ONE_DAY,
+        }),
         timeout: Duration.seconds(8),
         memorySize: 128,
         bundling: {
